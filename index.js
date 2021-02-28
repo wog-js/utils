@@ -6,5 +6,5 @@ module.exports = {
 	isDebug: require('./lib/is-debug'),
 	isEmptyObject: require('./lib/is-empty-object'),
 	nanoidAlphabet: require('./lib/nanoid-alphabet'),
-	paths: require('./lib/paths')
+	url: require('./lib/url')
 };
