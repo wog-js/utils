@@ -11,7 +11,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
   "homepage": "https://github.com/wog-js/utils#readme",
   "devDependencies": {
     "@types/node": "^14.14.31",
+    "ava": "^3.15.0",
     "camelcase": "^6.2.0"
   },
   "dependencies": {
