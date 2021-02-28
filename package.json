@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "name": "@wogjs/utils",
+  "version": "0.5.0",
+  "description": "Shared utilities.",
+  "main": "index.js",
+  "files": [
+    "lib/*.js"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wog-js/utils.git"
+  },
+  "keywords": [
+    "wogjs",
+    "utils",
+    "shared",
+    "utilities"
+  ],
+  "author": "Axel Rindle <mail@axelrindle.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wog-js/utils/issues"
+  },
+  "homepage": "https://github.com/wog-js/utils#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "camelcase": "^6.2.0"
+  },
+  "dependencies": {
+    "nanoid": "^3.1.20"
+  }
+}
