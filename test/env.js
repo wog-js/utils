@@ -6,6 +6,8 @@ process.env.SOME_TEXT = 'hello there';
 process.env.SOME_NUMBER = '314159265359';
 process.env.SOME_OTHER_NUMBER = '10';
 process.env.SOME_BOOL = 'true';
+process.env.SOME_OTHER_BOOL = 'false';
+process.env.SOME_EMPTY_BOOL = '';
 
 test('text',
     /** @param {import('ava').ExecutionContext} t */
@@ -30,8 +32,17 @@ test('bool',
     /** @param {import('ava').ExecutionContext} t */
     t => {
         t.is( env.bool('SOME_BOOL'), true );
+        t.is( env.bool('SOME_OTHER_BOOL'), false );
+        t.is( env.bool('SOME_EMPTY_BOOL'), false );
         t.is( env.bool('SOME_UNKNOWN_BOOL', false), false );
         t.is( env.bool('SOME_UNKNOWN_BOOL', true), true );
-        t.is( env.bool('SOME_UNKNOWN_BOOL'), undefined );
+        t.is( env.bool('SOME_UNKNOWN_BOOL'), false );
+        t.is( env.bool('SOME_UNKNOWN_BOOL', null), false );
+        t.is( env.bool('SOME_UNKNOWN_BOOL', 'null'), true );
+        t.is( env.bool('SOME_UNKNOWN_BOOL', 3), true );
+        t.is( env.bool('SOME_TEXT', true), true );
+        t.is( env.bool('SOME_TEXT'), false );
+        t.is( env.bool('SOME_TEXT', 4), true );
+        t.is( env.bool('SOME_TEXT', 0), false );
     }
 );
