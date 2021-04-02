@@ -11,7 +11,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "ava"
+    "test": "nyc --reporter=lcov --reporter=text ava"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,8 @@
   "devDependencies": {
     "@types/node": "^14.14.31",
     "ava": "^3.15.0",
-    "camelcase": "^6.2.0"
+    "camelcase": "^6.2.0",
+    "nyc": "^15.1.0"
   },
   "dependencies": {
     "nanoid": "^3.1.20"
